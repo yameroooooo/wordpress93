@@ -3,7 +3,7 @@ version: '3.1'
 services:
 
   wordpress:
-    image: wordpress
+    image: mrheart/wordpress
     restart: always
     ports:
       - 8080:80
@@ -25,7 +25,7 @@ services:
       PMA_HOST: db
       MYSQL_ROOT_PASSWORD: examplepass
   db:
-    image: mysql:5.7
+    image: mrheart/database
     restart: always
     environment:
       MYSQL_DATABASE: exampledb
